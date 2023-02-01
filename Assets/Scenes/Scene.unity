@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 1361310023}
   - component: {fileID: 1361310022}
   - component: {fileID: 1361310024}
+  - component: {fileID: 1361310025}
   m_Layer: 5
   m_Name: Box
   m_TagString: Untagged
@@ -612,6 +613,19 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &1361310025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361310020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5286a3393a541d4a911b35071a5f81d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellView: {fileID: 4285035947964310450, guid: 77580de59b53363478112aafef85e07d, type: 3}
 --- !u!1 &1435936256
 GameObject:
   m_ObjectHideFlags: 0
