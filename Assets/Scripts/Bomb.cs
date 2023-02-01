@@ -18,5 +18,11 @@
             X = x;
             Y = y;
         }
+
+        
+        public bool IsEqualsBobm(Bomb bomb)
+        {
+            return bomb.X == X && bomb.Y == Y;
+        }
     }
 }
