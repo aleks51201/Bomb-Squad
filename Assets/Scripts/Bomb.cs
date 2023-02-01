@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Assets.Scripts
+﻿namespace Assets.Scripts
 {
     public class Bomb
     {
+        public int X { get; private set; }
+        public int Y { get; private set; }
+        public int[] Coordinate
+        {
+            get
+            {
+                return new int[] { X, Y };
+            }
+        }
+
+
+        public Bomb(int x, int y)
+        {
+            X = x;
+            Y = y;
+        }
     }
 }
