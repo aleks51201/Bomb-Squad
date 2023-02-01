@@ -1,6 +1,12 @@
-﻿namespace Assets.Scripts
+﻿using UnityEngine;
+
+namespace Assets.Scripts
 {
-    public class CellSpawnerView
+    public class CellSpawnerView: MonoBehaviour
     {
+        private void SpawnCell()
+        {
+
+        }
     }
 }
