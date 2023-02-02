@@ -6,7 +6,6 @@ namespace Assets.Scripts
     {
         [SerializeField] private CellView cellView;
 
-        private ScoreHolder score;
 
 
         private CellView SpawnCell()
@@ -31,7 +30,6 @@ namespace Assets.Scripts
         private void Start()
         {
             SpawnCels();
-            score = new();
         }
     }
 }

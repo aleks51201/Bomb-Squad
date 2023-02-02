@@ -9,6 +9,8 @@ namespace Assets.Scripts
         [SerializeField] private string loseText;
         [SerializeField] private string winText;
 
+        private ScoreHolder score;
+
 
         private void ActivateLosePanel()
         {
@@ -19,7 +21,12 @@ namespace Assets.Scripts
         private void ActivateWinPanel()
         {
             panel.SetActive(true);
-            panel.GetComponentInChildren<TextMeshProUGUI>().text = winText;
+            panel.GetComponentInChildren<TextMeshProUGUI>().text = winText + $"/n{score.Score}";
+        }
+
+        private void Start()
+        {
+            score = new();
         }
 
         private void OnEnable()
