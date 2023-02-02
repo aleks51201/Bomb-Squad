@@ -15,7 +15,7 @@ namespace Assets.Scripts
         private void ActivateLosePanel()
         {
             panel.SetActive(true);
-            panel.GetComponentInChildren<TextMeshProUGUI>().text = loseText;
+            panel.GetComponentInChildren<TextMeshProUGUI>().text = loseText + $"/n{score.Score}";
         }
 
         private void ActivateWinPanel()
