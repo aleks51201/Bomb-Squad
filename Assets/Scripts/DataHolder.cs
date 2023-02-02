@@ -37,6 +37,11 @@ namespace Assets.Scripts
             }
         }
 
+        private void lakdjf()
+        {
+
+        }
+
         private int GetRandomNum()
         {
             var rnd = new System.Random();
