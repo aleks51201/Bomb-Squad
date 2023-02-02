@@ -5,6 +5,8 @@ namespace Assets.Scripts
     public class DataHolder
     {
         private int[,] array = new int[10, 10];
+        private bool[,] array1 = new bool[10, 10];
+
 
         private void SpawnBombCoord()
         {
@@ -28,6 +30,10 @@ namespace Assets.Scripts
                     }
                 }
                 n++;
+            }
+            foreach(var bmb in arr)
+            {
+                array1[bmb.Y, bmb.X] = true;
             }
         }
 
