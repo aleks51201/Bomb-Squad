@@ -23,7 +23,7 @@ public class CellView : MonoBehaviour, IPointerClickHandler
 
     public void OnClick()
     {
-        if (DistanceValue == 0)
+        if (IsBomb)
         {
             GameLosedEvent?.Invoke();
             return;
