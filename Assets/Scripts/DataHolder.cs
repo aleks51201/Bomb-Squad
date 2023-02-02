@@ -40,6 +40,7 @@ namespace Assets.Scripts
                         continue;
                     }
                 }
+                arr.Add(bomb);
                 n++;
             }
             foreach (Bomb bmb in arr)
