@@ -40,7 +40,7 @@ namespace Assets.Scripts
             }
         }
 
-        private void lakdjf()
+        private void AssignDistanceValues​​ToCells()
         {
             for(int i= 0; i < 10; i++)
             {
