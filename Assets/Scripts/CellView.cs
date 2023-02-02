@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class CellView : MonoBehaviour, IPointerClickHandler
 {
+    private static int s_numRightClick = 5;
+
+
     //public int DistanceValue { get; set; }
     public int DistanceValue;
     public bool IsBomb
@@ -44,11 +47,16 @@ public class CellView : MonoBehaviour, IPointerClickHandler
             var img = GetComponent<Image>();
             if (img.color == Color.white)
             {
-                img.color = Color.blue;
+                if (s_numRightClick > 0)
+                {
+                    img.color = Color.blue;
+                    s_numRightClick--;
+                }
             }
             else
             {
                 img.color = Color.white;
+                s_numRightClick++;
             }
         }
     }
