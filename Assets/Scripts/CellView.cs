@@ -1,8 +1,10 @@
 using System;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class CellView : MonoBehaviour
+public class CellView : MonoBehaviour, IPointerClickHandler
 {
     //public int DistanceValue { get; set; }
     public int DistanceValue;
@@ -32,6 +34,23 @@ public class CellView : MonoBehaviour
 
     private void ChangeText()
     {
-        GetComponentInChildren<TextMeshProUGUI>().text= $"{DistanceValue}";
+        GetComponentInChildren<TextMeshProUGUI>().text = $"{DistanceValue}";
     }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            var img = GetComponent<Image>();
+            if (img.color == Color.white)
+            {
+                img.color = Color.blue;
+            }
+            else
+            {
+                img.color = Color.white;
+            }
+        }
+    }
+
 }
