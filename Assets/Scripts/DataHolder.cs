@@ -10,6 +10,9 @@ namespace Assets.Scripts
         private List<Bomb> arr;
 
 
+        public int[,] DistanceValueArr => array;
+
+
         private void SpawnBombCoord()
         {
             arr = new List<Bomb>();
