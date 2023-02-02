@@ -14,6 +14,8 @@ namespace Assets.Scripts
 
         private void SpawnCels()
         {
+            var data = new DataHolder();
+            data.
             for (int i = 0; i < 100; i++)
             {
                 SpawnCell();

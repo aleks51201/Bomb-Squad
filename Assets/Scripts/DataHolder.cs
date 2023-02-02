@@ -13,6 +13,12 @@ namespace Assets.Scripts
         public int[,] DistanceValueArr => array;
 
 
+        public void Init()
+        {
+            SpawnBombCoord();
+            AssignDistanceValuesToCells();
+        }
+
         private void SpawnBombCoord()
         {
             arr = new List<Bomb>();
