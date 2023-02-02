@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using TMPro;
 
 public class CellView : MonoBehaviour
 {
@@ -25,6 +26,12 @@ public class CellView : MonoBehaviour
             GameLosedEvent?.Invoke();
             return;
         }
+        ChangeText();
         ButtonClickedEbent?.Invoke();
+    }
+
+    private void ChangeText()
+    {
+        GetComponentInChildren<TextMeshProUGUI>().text= $"{DistanceValue}";
     }
 }
