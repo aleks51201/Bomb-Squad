@@ -39,6 +39,7 @@ namespace Assets.Scripts
 
         private void lakdjf()
         {
+            var coords = new Coord[4] { new Coord(0,1)};
 
         }
 
