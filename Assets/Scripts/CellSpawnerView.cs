@@ -2,23 +2,27 @@
 
 namespace Assets.Scripts
 {
-    public class CellSpawnerView: MonoBehaviour
+    public class CellSpawnerView : MonoBehaviour
     {
-        [SerializeField]private CellView cellView;
+        [SerializeField] private CellView cellView;
 
 
-        private void SpawnCell()
+        private CellView SpawnCell()
         {
-            Instantiate(cellView, this.transform);
+            return Instantiate(cellView, this.transform);
         }
 
         private void SpawnCels()
         {
             var data = new DataHolder();
-            data.
-            for (int i = 0; i < 100; i++)
+            data.Init();
+            for (int i = 0; i < 10; i++)
             {
-                SpawnCell();
+                for (int j = 0; j < 10; j++)
+                {
+                    CellView cell = SpawnCell();
+                    cell.DistanceValue = data.DistanceValueArr[i, j];
+                }
             }
         }
 
