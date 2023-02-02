@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class PanelActivator:MonoBehaviour
+    public class PanelActivator : MonoBehaviour
     {
         [SerializeField] private GameObject panel;
         [SerializeField] private string loseText;
@@ -16,14 +16,22 @@ namespace Assets.Scripts
             panel.GetComponentInChildren<TextMeshProUGUI>().text = loseText;
         }
 
+        private void ActivateWinPanel()
+        {
+            panel.SetActive(true);
+            panel.GetComponentInChildren<TextMeshProUGUI>().text = winText;
+        }
+
         private void OnEnable()
         {
             CellView.GameLosedEvent += ActivateLosePanel;
+            CellView.GameWinEvent += ActivateWinPanel;
         }
 
         private void OnDisable()
         {
             CellView.GameLosedEvent -= ActivateLosePanel;
+            CellView.GameWinEvent -= ActivateWinPanel;
         }
     }
 }

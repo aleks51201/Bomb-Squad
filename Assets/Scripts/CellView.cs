@@ -22,6 +22,7 @@ public class CellView : MonoBehaviour, IPointerClickHandler
 
 
     public static Action GameLosedEvent;
+    public static Action GameWinEvent;
     public static Action ButtonClickedEbent;
 
 
@@ -57,7 +58,7 @@ public class CellView : MonoBehaviour, IPointerClickHandler
                         s_bomb++;
                         if(s_bomb == 5)
                         {
-                            GameLosedEvent?.Invoke();
+                            GameWinEvent?.Invoke();
                         }
                     }
                 }
