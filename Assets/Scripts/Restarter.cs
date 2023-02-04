@@ -11,7 +11,6 @@ namespace Assets.Scripts
 {
     public class Restarter:MonoBehaviour
     {
-        [SerializeField] private Sprite defaultCellSprite;
         [SerializeField] private GameObject losePanel;
 
         private CellView[] _cells;
