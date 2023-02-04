@@ -9,6 +9,8 @@ public class CellView : MonoBehaviour, IPointerClickHandler
     private static int s_numRightClick = 5;
     private static int s_bomb = 0;
 
+    [SerializeField] private Sprite bombSprite;
+
 
     public int DistanceValue { get; set; }
     public bool IsBomb
@@ -30,6 +32,7 @@ public class CellView : MonoBehaviour, IPointerClickHandler
     {
         if (IsBomb)
         {
+            GetComponent<Image>().sprite = bombSprite;
             GameLosedEvent?.Invoke();
             return;
         }

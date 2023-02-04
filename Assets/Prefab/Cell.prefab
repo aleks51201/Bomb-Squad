@@ -282,4 +282,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc63f175367a5948af54a64b69d84a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DistanceValue: 0
+  bombSprite: {fileID: 21300000, guid: 87e417efb8f5ef04bb7a5ccb64e4e7ca, type: 3}
