@@ -283,5 +283,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombSprite: {fileID: 21300000, guid: 87e417efb8f5ef04bb7a5ccb64e4e7ca, type: 3}
-  flagSprite: {fileID: 21300000, guid: 87e417efb8f5ef04bb7a5ccb64e4e7ca, type: 3}
+  flagSprite: {fileID: 21300000, guid: 9eae16f99a733d94782b16e71748c01b, type: 3}
   defaultSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
