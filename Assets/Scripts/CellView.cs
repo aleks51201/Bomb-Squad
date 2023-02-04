@@ -10,6 +10,8 @@ public class CellView : MonoBehaviour, IPointerClickHandler
     public static int Bomb = 0;
 
     [SerializeField] private Sprite bombSprite;
+    [SerializeField] private Sprite flagSprite;
+    [SerializeField] private Sprite defaultSprite;
 
 
     public int DistanceValue { get; set; }
@@ -21,6 +23,7 @@ public class CellView : MonoBehaviour, IPointerClickHandler
         }
     }
     public bool IsClicked { get; private set; }
+    public Sprite DefaultSprite => defaultSprite;
 
 
     public static Action GameLosedEvent;
@@ -59,7 +62,14 @@ public class CellView : MonoBehaviour, IPointerClickHandler
                     {
                         return;
                     }
-                    img.color = Color.blue;
+                    if(flagSprite is null)
+                    {
+                        img.color = Color.blue;
+                    }
+                    else
+                    {
+                        img.sprite = flagSprite;
+                    }
                     NumRightClick--;
                     if (IsBomb)
                     {
@@ -73,7 +83,14 @@ public class CellView : MonoBehaviour, IPointerClickHandler
             }
             else
             {
-                img.color = Color.white;
+                if (flagSprite is null)
+                {
+                    img.color = Color.white;
+                }
+                else
+                {
+                    img.sprite = defaultSprite;
+                }
                 NumRightClick++;
                 if (IsBomb)
                 {
