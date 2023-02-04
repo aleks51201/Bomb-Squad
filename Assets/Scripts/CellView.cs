@@ -19,6 +19,7 @@ public class CellView : MonoBehaviour, IPointerClickHandler
             return DistanceValue == 0;
         }
     }
+    public bool IsClicked { get; private set; }
 
 
     public static Action GameLosedEvent;
@@ -34,6 +35,7 @@ public class CellView : MonoBehaviour, IPointerClickHandler
             return;
         }
         ChangeText();
+        IsClicked = true;
         ButtonClickedEbent?.Invoke();
     }
 
@@ -51,6 +53,10 @@ public class CellView : MonoBehaviour, IPointerClickHandler
             {
                 if (s_numRightClick > 0)
                 {
+                    if (IsClicked)
+                    {
+                        return;
+                    }
                     img.color = Color.blue;
                     s_numRightClick--;
                     if (IsBomb)
