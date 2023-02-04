@@ -52,7 +52,7 @@ namespace Assets.Scripts
             {
                 return;
             }
-
+            UpdateCells();
         }
     }
 }
