@@ -34,6 +34,10 @@ public class CellView : MonoBehaviour, IPointerClickHandler
 
     public void OnClick()
     {
+        if (IsClicked)
+        {
+            return;
+        }
         if (IsBomb)
         {
             GetComponent<Image>().sprite = bombSprite;
