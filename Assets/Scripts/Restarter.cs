@@ -39,7 +39,7 @@ namespace Assets.Scripts
             {
                 CellView cell = Cells[i];
                 cell.GetComponent<Image>().color = Color.white;
-                cell.GetComponent<Image>().sprite = defaultCellSprite;
+                cell.GetComponent<Image>().sprite = cell.DefaultSprite;
                 cell.GetComponentInChildren<TextMeshProUGUI>().text = "";
                 cell.DistanceValue = distances[i];
             }
