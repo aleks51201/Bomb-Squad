@@ -27,6 +27,7 @@ namespace Assets.Scripts
         private void Start()
         {
             score = new();
+            score.Init();
         }
 
         private void OnEnable()
