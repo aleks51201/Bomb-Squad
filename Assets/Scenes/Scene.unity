@@ -734,6 +734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultCellSprite: {fileID: 21300000, guid: 87e417efb8f5ef04bb7a5ccb64e4e7ca, type: 3}
+  losePanel: {fileID: 1927997826}
 --- !u!1 &1927997826
 GameObject:
   m_ObjectHideFlags: 0
