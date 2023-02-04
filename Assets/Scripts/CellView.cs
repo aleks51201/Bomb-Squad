@@ -34,7 +34,7 @@ public class CellView : MonoBehaviour, IPointerClickHandler
 
     public void OnClick()
     {
-        if (IsClicked)
+        if (IsClicked || IsMarked)
         {
             return;
         }
