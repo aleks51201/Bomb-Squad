@@ -34,12 +34,27 @@ namespace Assets.Scripts
         {
             CellView.NumRightClick = 5;
             CellView.Bomb = 0;
-            foreach(CellView cell in Cells)
+            int[] distances = ChangeDataFormat();
+            for(int i=0; i< Cells.Length;i++)
             {
+                CellView cell = Cells[i];
                 cell.GetComponent<Image>().color = Color.white;
                 cell.GetComponent<Image>().sprite = defaultCellSprite;
                 cell.GetComponentInChildren<TextMeshProUGUI>().text = "";
+                cell.DistanceValue = distances[i];
             }
+        }
+
+        private int[] ChangeDataFormat()
+        {
+            DataHolder data = new();
+            data.Init();
+            List<int> result = new();
+            foreach(int i in data.DistanceValueArr)
+            {
+                result.Add(i);
+            }
+            return result.ToArray();
         }
 
         private CellView[] GetCells()
