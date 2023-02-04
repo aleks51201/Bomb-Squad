@@ -22,7 +22,8 @@ public class CellView : MonoBehaviour, IPointerClickHandler
             return DistanceValue == 0;
         }
     }
-    public bool IsClicked { get; private set; }
+    public bool IsClicked { get; set; }
+    public bool IsMarked { get; set; }
     public Sprite DefaultSprite => defaultSprite;
 
 
@@ -54,7 +55,7 @@ public class CellView : MonoBehaviour, IPointerClickHandler
         if (eventData.button == PointerEventData.InputButton.Right)
         {
             var img = GetComponent<Image>();
-            if (img.color == Color.white)
+            if (!IsMarked)
             {
                 if (NumRightClick > 0)
                 {
@@ -62,15 +63,9 @@ public class CellView : MonoBehaviour, IPointerClickHandler
                     {
                         return;
                     }
-                    if(flagSprite is null)
-                    {
-                        img.color = Color.blue;
-                    }
-                    else
-                    {
-                        img.sprite = flagSprite;
-                    }
+                    img.sprite = flagSprite;
                     NumRightClick--;
+                    IsMarked = true;
                     if (IsBomb)
                     {
                         Bomb++;
@@ -83,14 +78,8 @@ public class CellView : MonoBehaviour, IPointerClickHandler
             }
             else
             {
-                if (flagSprite is null)
-                {
-                    img.color = Color.white;
-                }
-                else
-                {
-                    img.sprite = defaultSprite;
-                }
+                img.sprite = defaultSprite;
+                IsMarked = false;
                 NumRightClick++;
                 if (IsBomb)
                 {

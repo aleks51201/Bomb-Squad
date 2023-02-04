@@ -42,6 +42,8 @@ namespace Assets.Scripts
                 cell.GetComponent<Image>().sprite = cell.DefaultSprite;
                 cell.GetComponentInChildren<TextMeshProUGUI>().text = "";
                 cell.DistanceValue = distances[i];
+                cell.IsClicked = false;
+                cell.IsMarked = false;
             }
         }
 
