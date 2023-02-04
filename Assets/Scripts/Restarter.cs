@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
     public class Restarter:MonoBehaviour
     {
+        [SerializeField] private Sprite defaultCellSprite;
+
         private CellView[] _cells;
 
 
@@ -24,6 +28,18 @@ namespace Assets.Scripts
             }
         }
 
+
+        private void UpdateCells()
+        {
+            CellView.NumRightClick = 5;
+            CellView.Bomb = 0;
+            foreach(CellView cell in Cells)
+            {
+                cell.GetComponent<Image>().color = Color.white;
+                cell.GetComponent<Image>().sprite = defaultCellSprite;
+                cell.GetComponentInChildren<TextMeshProUGUI>().text = "";
+            }
+        }
 
         private CellView[] GetCells()
         {

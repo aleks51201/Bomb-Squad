@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class CellView : MonoBehaviour, IPointerClickHandler
 {
-    private static int s_numRightClick = 5;
-    private static int s_bomb = 0;
+    public  static int NumRightClick = 5;
+    public static int Bomb = 0;
 
     [SerializeField] private Sprite bombSprite;
 
@@ -53,18 +53,18 @@ public class CellView : MonoBehaviour, IPointerClickHandler
             var img = GetComponent<Image>();
             if (img.color == Color.white)
             {
-                if (s_numRightClick > 0)
+                if (NumRightClick > 0)
                 {
                     if (IsClicked)
                     {
                         return;
                     }
                     img.color = Color.blue;
-                    s_numRightClick--;
+                    NumRightClick--;
                     if (IsBomb)
                     {
-                        s_bomb++;
-                        if(s_bomb == 5)
+                        Bomb++;
+                        if(Bomb == 5)
                         {
                             GameWinEvent?.Invoke();
                         }
@@ -74,10 +74,10 @@ public class CellView : MonoBehaviour, IPointerClickHandler
             else
             {
                 img.color = Color.white;
-                s_numRightClick++;
+                NumRightClick++;
                 if (IsBomb)
                 {
-                    s_bomb--;
+                    Bomb--;
                 }
             }
         }
