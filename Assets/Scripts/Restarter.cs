@@ -29,6 +29,9 @@ namespace Assets.Scripts
         }
 
 
+        public static Action GameRestartedEvent;
+
+
         private void UpdateCells()
         {
             CellView.NumRightClick = 5;
@@ -44,6 +47,7 @@ namespace Assets.Scripts
                 cell.IsClicked = false;
                 cell.IsMarked = false;
             }
+            GameRestartedEvent?.Invoke();
         }
 
         private int[] ChangeDataFormat()
