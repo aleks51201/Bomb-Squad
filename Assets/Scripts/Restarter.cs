@@ -9,6 +9,22 @@ namespace Assets.Scripts
 {
     public class Restarter:MonoBehaviour
     {
+        private CellView[] _cells;
+
+
+        private CellView[] Cells
+        {
+            get
+            {
+                if(_cells is null)
+                {
+                    _cells = GetCells();
+                }
+                return _cells;
+            }
+        }
+
+
         private CellView[] GetCells()
         {
             return GetComponentsInChildren<CellView>();
