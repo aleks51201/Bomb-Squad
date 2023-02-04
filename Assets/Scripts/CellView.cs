@@ -10,8 +10,7 @@ public class CellView : MonoBehaviour, IPointerClickHandler
     private static int s_bomb = 0;
 
 
-    //public int DistanceValue { get; set; }
-    public int DistanceValue;
+    public int DistanceValue { get; set; }
     public bool IsBomb
     {
         get
