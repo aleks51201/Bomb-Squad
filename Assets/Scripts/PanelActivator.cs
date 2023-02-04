@@ -15,13 +15,13 @@ namespace Assets.Scripts
         private void ActivateLosePanel()
         {
             panel.SetActive(true);
-            panel.GetComponentInChildren<TextMeshProUGUI>().text = loseText + $"/n{score.Score}";
+            panel.GetComponentInChildren<TextMeshProUGUI>().text = loseText + $"\n{score.Score}";
         }
 
         private void ActivateWinPanel()
         {
             panel.SetActive(true);
-            panel.GetComponentInChildren<TextMeshProUGUI>().text = winText + $"/n{score.Score}";
+            panel.GetComponentInChildren<TextMeshProUGUI>().text = winText + $"\n{score.Score}";
         }
 
         private void Start()
