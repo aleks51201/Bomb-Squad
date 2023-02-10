@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace Scripts.Yandex
 {
     public class Y : MonoBehaviour
     {
-        [DllImport("_Internal")] 
+
+        [DllImport("__Internal")]
         private static extern void Hello();
 
         public void OnClick()
