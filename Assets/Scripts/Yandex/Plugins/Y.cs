@@ -9,6 +9,7 @@ namespace Scripts.Yandex
         [DllImport("__Internal")]
         private static extern void Hello();
 
+
         public void OnClick()
         {
             Init();
