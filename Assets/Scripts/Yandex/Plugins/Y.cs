@@ -8,13 +8,17 @@ using UnityEngine;
 
 namespace Scripts.Yandex
 {
-    public class Y: MonoBehaviour
+    public class Y : MonoBehaviour
     {
         [DllImport("_internal")] 
         private static extern void Hello();
 
+        public void OnClick()
+        {
+            Init();
+        }
 
-        private void Start()
+        private void Init()
         {
             Hello();
         }

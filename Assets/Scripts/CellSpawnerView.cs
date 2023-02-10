@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Scripts.Yandex;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
