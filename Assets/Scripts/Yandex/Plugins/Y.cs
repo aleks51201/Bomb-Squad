@@ -10,7 +10,7 @@ namespace Scripts.Yandex
 {
     public class Y : MonoBehaviour
     {
-        [DllImport("_internal")] 
+        [DllImport("_Internal")] 
         private static extern void Hello();
 
         public void OnClick()
