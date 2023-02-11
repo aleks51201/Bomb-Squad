@@ -68,14 +68,34 @@ namespace Assets.Scripts
             return GetComponentsInChildren<CellView>();
         }
 
+        private void Restart()
+        {
+            UpdateCells();
+            _losePanel.SetActive(false);
+        }
+
+        private void OnButtonClicked()
+        {
+            Restart();
+        }
+
         private void Update()
         {
             if (!Input.GetKey(KeyCode.Space))
             {
                 return;
             }
-            UpdateCells();
-            _losePanel.SetActive(false);
+            Restart();
+        }
+
+        private void OnEnable()
+        {
+            _btn.ButtonClickedEvent += OnButtonClicked;
+        }
+
+        private void OnDisable()
+        {
+            _btn.ButtonClickedEvent -= OnButtonClicked;
         }
     }
 }
