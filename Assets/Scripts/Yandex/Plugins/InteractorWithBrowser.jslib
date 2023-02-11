@@ -47,13 +47,13 @@
             return 0;
         });
     },
-    SetLeaderboardScore: function (score) {
+    SetLeaderBoardScore: function (score) {
         ysdk.getLeaderboards()
           .then(lb => {
             lb.setLeaderboardScore('leaderboard2021', score);
           });
     },
-    GetLeaderboardScore: function () {
+    GetLeaderBoardScore: function () {
         var score = ysdk.getLeaderboards()
           .then(lb => lb.getLeaderboardPlayerEntry('leaderboard2021'))
           .catch(err => {
