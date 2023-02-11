@@ -3,23 +3,6 @@
         window.alert("Hello, world!");
         console.log("Hello world");
     },
-    no: function () {
-        initPlayer().then(_player => {
-        if (_player.getMode() === 'lite') {
-            // Игрок не авторизован.
-            ysdk.auth.openAuthDialog().then(() => {
-                    // Игрок успешно авторизован
-                    initPlayer().catch(err => {
-                        // Ошибка при инициализации объекта Player.
-                    });
-                }).catch(() => {
-                    // Игрок не авторизован.
-                });
-        }
-        }).catch(err => {
-            // Ошибка при инициализации объекта Player.
-        });
-    },
     IsPlayerAuthorized: function () {
         if (player.getMode() != 'lite') {
             return 1;
