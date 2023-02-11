@@ -64,12 +64,13 @@ namespace Scripts.Yandex
         private void OnEnable()
         {
             CellView.GameWinEvent += OnWin;
-            // Нажатие на копку авторизации += OnAuthButtonClidk();
+            _btn.ButtonClickedEvent += OnAuthButtonClick;
         }
 
         private void OnDisable()
         {
             CellView.GameWinEvent -= OnWin;
+            _btn.ButtonClickedEvent -= OnAuthButtonClick;
         }
     }
 }
