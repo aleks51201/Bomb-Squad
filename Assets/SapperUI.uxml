@@ -1,0 +1,127 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/ContanerFLEX.uss?fileID=7433441132597879392&amp;guid=e7a77fb136553244b885b86cd63f6329&amp;type=3#ContanerFLEX" />
+    <ui:VisualElement style="width: 100%; height: 100%; flex-direction: row-reverse;">
+        <ui:VisualElement style="flex-grow: 1;" />
+        <ui:VisualElement style="flex-grow: 4; left: auto;">
+            <ui:VisualElement style="flex-grow: 5; background-color: rgb(185, 185, 185); -unity-background-scale-mode: scale-and-crop; flex-direction: column; flex-wrap: nowrap; justify-content: center; align-items: center; position: absolute; left: 0; top: 0; right: 0; bottom: 0; min-width: 0; min-height: 0;">
+                <ui:VisualElement style="width: 70%; height: 0; padding-top: 70%; background-color: rgba(14, 14, 14, 0); max-width: none; max-height: 100%; padding-right: 0; padding-left: 0; min-width: auto; flex-wrap: nowrap; align-items: stretch; justify-content: flex-start; left: auto;">
+                    <ui:VisualElement style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgba(156, 156, 156, 0); max-width: none; min-width: 0; min-height: 0; flex-wrap: wrap; justify-content: flex-start; align-items: stretch; width: auto; height: auto; margin-left: 0; margin-right: 0; margin-top: 0; flex-direction: row; padding-left: 0; padding-top: 3px;">
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" style="background-image: none;" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                        <ui:Button display-tooltip-when-elided="true" enable-rich-text="true" class="gamebutton NewButton" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 0; flex-wrap: wrap; align-items: center; flex-direction: column; justify-content: center;">
+            <ui:VisualElement style="width: 90%; flex-grow: 3;">
+                <ui:Label text="Сапер Модерн 1.0 " display-tooltip-when-elided="true" style="flex-wrap: wrap; width: 90%; white-space: nowrap; -unity-background-scale-mode: stretch-to-fill; font-size: 36%; -unity-font-style: bold;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="width: 90%; flex-grow: 1;">
+                <ui:Label text="Правила игры:" display-tooltip-when-elided="true" style="flex-wrap: wrap; width: 90%; white-space: nowrap; -unity-background-scale-mode: stretch-to-fill; font-size: 29%; -unity-font-style: bold;" />
+                <ui:Label text="На поле находятся 5 мин, которые игроку нужно найти." display-tooltip-when-elided="true" style="flex-wrap: wrap; width: 90%; white-space: normal; -unity-background-scale-mode: stretch-to-fill; font-size: 28%; -unity-text-align: upper-left; -unity-font-style: normal; -unity-text-outline-width: 0; -unity-text-outline-color: rgb(209, 62, 62);" />
+                <ui:Label text="Игрок может открывать клетки (ЛКМ) или помечать их (ПКМ)." display-tooltip-when-elided="true" style="flex-wrap: wrap; width: 90%; white-space: normal; -unity-background-scale-mode: stretch-to-fill; font-size: 28%;" />
+                <ui:Label text="В открытой клетке отображается число, которое равно расстоянию от клетки до ближейшей мины." display-tooltip-when-elided="true" style="flex-wrap: wrap; width: 90%; white-space: normal; -unity-background-scale-mode: stretch-to-fill; font-size: 28%;" />
+                <ui:Label text="Цель: пометить все мины, сделав при открыв при этом минимальное количество клеточек." display-tooltip-when-elided="true" style="flex-wrap: wrap; width: 90%; white-space: normal; -unity-background-scale-mode: stretch-to-fill; font-size: 28%;" />
+                <ui:Button text="Начать заново" display-tooltip-when-elided="true" style="width: 90%; font-size: 30%; padding-top: 6px; margin-top: 15px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
