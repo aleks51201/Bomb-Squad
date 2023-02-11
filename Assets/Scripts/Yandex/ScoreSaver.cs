@@ -7,6 +7,7 @@ namespace Scripts.Yandex
 {
     public class ScoreSaver : MonoBehaviour
     {
+        [SerializeField] private Btn _btn;
         private ScoreHolder _score;
         private Coroutine _currentCoroutine;
 
