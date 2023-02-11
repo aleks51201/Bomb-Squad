@@ -8,7 +8,7 @@ namespace Assets.Scripts
         public Action ButtonClickedEvent;
 
 
-        private void OnClick()
+        public void OnClick()
         {
             ButtonClickedEvent?.Invoke();
         }
