@@ -11,7 +11,8 @@ namespace Assets.Scripts
 {
     public class Restarter:MonoBehaviour
     {
-        [SerializeField] private GameObject losePanel;
+        [SerializeField] private GameObject _losePanel;
+        [SerializeField] private Btn _btn;
 
         private CellView[] _cells;
 
@@ -74,7 +75,7 @@ namespace Assets.Scripts
                 return;
             }
             UpdateCells();
-            losePanel.SetActive(false);
+            _losePanel.SetActive(false);
         }
     }
 }
