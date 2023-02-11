@@ -47,13 +47,13 @@
             return 0;
         });
     },
-    SetLedearBoardScore: function (score) {
+    SetLeaderboardScore: function (score) {
         ysdk.getLeaderboards()
           .then(lb => {
             lb.setLeaderboardScore('leaderboard2021', score);
           });
     },
-    GetLedearBoardScore: function () {
+    GetLeaderboardScore: function () {
         var score = ysdk.getLeaderboards()
           .then(lb => lb.getLeaderboardPlayerEntry('leaderboard2021'))
           .catch(err => {
@@ -61,7 +61,8 @@
               // Срабатывает, если у игрока нет записи в лидерборде
                 return 0;
             }
-          }).score;
+          })
+          .score;
         return score;
     },
 });
