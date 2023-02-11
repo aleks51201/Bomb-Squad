@@ -11,11 +11,11 @@
     },
     AuthPlayer: function () {
         initPlayer().then(_player => {
-        if (_player.getMode() === 'lite') {
-            // Игрок не авторизован.
-            ysdk.auth.openAuthDialog().then(() => {
+            if (_player.getMode() === 'lite') {
+                // Игрок не авторизован.
+                ysdk.auth.openAuthDialog().then(() => {
                     // Игрок успешно авторизован
-                return 1;
+                    return 1;
                     initPlayer().catch(err => {
                         // Ошибка при инициализации объекта Player.
                         return 0;
@@ -24,7 +24,7 @@
                     // Игрок не авторизован.
                     return 0;
                 });
-        }
+            }
         }).catch(err => {
             // Ошибка при инициализации объекта Player.
             return 0;
@@ -32,20 +32,19 @@
     },
     SetLeaderBoardScore: function (score) {
         ysdk.getLeaderboards()
-          .then(lb => {
-            lb.setLeaderboardScore('leaderboard2021', score);
-          });
+            .then(lb => {
+                lb.setLeaderboardScore('leaderboard2021', score);
+            });
     },
     GetLeaderBoardScore: function () {
         var score = ysdk.getLeaderboards()
-          .then(lb => lb.getLeaderboardPlayerEntry('leaderboard2021'))
-          .catch(err => {
-            if (err.code === 'LEADERBOARD_PLAYER_NOT_PRESENT') {
-              // Срабатывает, если у игрока нет записи в лидерборде
-                return 0;
-            }
-          })
-          .score;
+            .then(lb => lb.getLeaderboardPlayerEntry('leaderboard2021').score)
+            .catch(err => {
+                if (err.code === 'LEADERBOARD_PLAYER_NOT_PRESENT') {
+                    // Срабатывает, если у игрока нет записи в лидерборде
+                    return 0;
+                }
+            });
         return score;
     },
 });
