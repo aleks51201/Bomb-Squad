@@ -12,6 +12,9 @@ namespace Scripts.Yandex
         private Coroutine _currentCoroutine;
 
 
+        public bool IsPlayerAuth => IsPlayerAuthorized() == 1;
+
+
         [DllImport("__Internal")]
         private static extern void SetLeaderBoardScore(int score);
         [DllImport("__Internal")]
@@ -24,7 +27,7 @@ namespace Scripts.Yandex
 
         private void OnWin()
         {
-            if (IsPlayerAuthorized() == 0)
+            if (!IsPlayerAuth)
             {
                 return;
             }
@@ -39,7 +42,7 @@ namespace Scripts.Yandex
         private IEnumerator Authorization()
         {
             yield return new WaitUntil(() => AuthPlayer() == 0 ? true : false);
-            if (IsPlayerAuthorized() == 1)
+            if (IsPlayerAuth)
             {
                 StartCoroutine(SaveScore());
             }
