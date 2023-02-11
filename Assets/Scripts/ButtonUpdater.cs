@@ -1,9 +1,4 @@
 ﻿using Scripts.Yandex;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Assets.Scripts
@@ -16,11 +11,12 @@ namespace Assets.Scripts
 
         private void OnEnable()
         {
-            
-        }
-
-        private void OnDisable()
-        {
+            if (_scoreSaver.IsPlayerAuth)
+            {
+                _btn.gameObject.SetActive(false);
+                return;
+            }
+            _btn.gameObject.SetActive(true);
             
         }
     }
