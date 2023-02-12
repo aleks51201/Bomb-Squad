@@ -10,14 +10,12 @@
         return 0;
     },
     AuthPlayer: function () {
-        if (player.getMode() === 'lite') {
-            // Игрок не авторизован.
-            ysdk.auth.openAuthDialog().then(() => {
-                    // Игрок успешно авторизован
-                }).catch(() => {
-                    // Игрок не авторизован.
-                });
-        }
+        ysdk.auth.openAuthDialog().then(() => {
+                // Игрок успешно авторизован
+            }).catch(() => {
+                // Игрок не авторизован.
+            });
+        return 0;
     },
     SetLeaderBoardScore: function (score) {
         ysdk.getLeaderboards()
