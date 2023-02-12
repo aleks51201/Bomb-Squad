@@ -47,9 +47,7 @@ namespace Scripts.Yandex
 
         private IEnumerator Authorization()
         {
-            AuthPlayer();
-            //yield return new WaitUntil(() => AuthPlayer() == 0 ? true : false);
-            yield return null;
+            yield return new WaitUntil(() => AuthPlayer() == 0 ? true : false);
             if (IsPlayerAuth)
             {
                 StartCoroutine(SaveScore());
