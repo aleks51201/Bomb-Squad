@@ -88,7 +88,7 @@ namespace Scripts.Yandex
             ConsoleLog($"SaveScore: end GetLeaderBoardScore int score = {score}");
             yield return null;
             ConsoleLog($"SaveScore: score = {score} < _score.Score = {_score.Score}: start");
-            if (score < _score.Score)
+            if (0 == score || score > _score.Score)
             {
                 ConsoleLog($"SaveScore: score = {score} < _score.Score = {_score.Score}: start SetLeaderBoardScore");
                 SetLeaderBoardScore(_score.Score);
