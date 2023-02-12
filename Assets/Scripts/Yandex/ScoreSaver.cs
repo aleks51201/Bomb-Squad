@@ -19,15 +19,15 @@ namespace Scripts.Yandex
         private static extern void SetLeaderBoardScore(int score);
         [DllImport("__Internal")]
         private static extern int GetLeaderBoardScore();
-        [DllImport("__Internal")]
+*/        [DllImport("__Internal")]
         private static extern int IsPlayerAuthorized();
-        [DllImport("__Internal")]
+/*        [DllImport("__Internal")]
         private static extern int AuthPlayer();
-
 */
+
         private void SetLeaderBoardScore(int score) { }
         private int GetLeaderBoardScore() { return 0; }
-        private int IsPlayerAuthorized() { return 0; }
+        //private int IsPlayerAuthorized() { return 0; }
         private int AuthPlayer() { return 0; }
 
         private void OnWin()
