@@ -17,6 +17,7 @@ namespace Assets.Scripts
         {
             SpawnBombCoord();
             AssignDistanceValuesToCells();
+            PrintMap();
         }
 
         private void SpawnBombCoord()
@@ -80,6 +81,20 @@ namespace Assets.Scripts
                     array[i, j] = max;
                 }
             }
+        }
+
+        public string PrintMap()
+        {
+            string strResult = "";
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    strResult = strResult +$" {array[i, j]}" ;
+                }
+                strResult = strResult + "\n";
+            }
+            return strResult;
         }
 
         private int GetRandomNum()
