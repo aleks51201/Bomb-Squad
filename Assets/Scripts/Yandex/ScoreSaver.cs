@@ -24,6 +24,8 @@ namespace Scripts.Yandex
         private static extern int IsPlayerAuthorized();
         [DllImport("__Internal")]
         private static extern int AuthPlayer();
+        [DllImport("__Internal")]
+        private static extern int ConsoleLog(string str);
 
 
 /*        //private void SetLeaderBoardScore(int score) { }

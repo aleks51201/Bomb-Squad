@@ -33,4 +33,7 @@
             });
         return score;
     },
+    ConsoleLog: function (str) {
+        console.log(UTF8ToString(str));
+    },
 });
