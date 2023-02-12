@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
@@ -83,7 +84,7 @@ namespace Assets.Scripts
             }
         }
 
-        public string PrintMap()
+        public void PrintMap()
         {
             string strResult = "";
             int b= 0;
@@ -100,7 +101,7 @@ namespace Assets.Scripts
                 strResult = strResult + "\n";
             }
             strResult = strResult + $"\n bomb = {b}\n";
-            return strResult;
+            Debug.Log(strResult);
         }
 
         private int GetRandomNum()
