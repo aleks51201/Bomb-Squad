@@ -10,12 +10,7 @@
         return 0;
     },
     AuthPlayer: function () {
-        ysdk.auth.openAuthDialog().then(() => {
-                // Игрок успешно авторизован
-            }).catch(() => {
-                // Игрок не авторизован.
-            });
-        return 0;
+
     },
     SetLeaderBoardScore: function (score) {
         ysdk.getLeaderboards()
