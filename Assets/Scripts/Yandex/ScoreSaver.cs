@@ -35,35 +35,52 @@ namespace Scripts.Yandex
 */
         private void OnWin()
         {
+            ConsoleLog("OnWin");
             if (!IsPlayerAuth)
             {
+                ConsoleLog("OnWin: player is not auth");
                 return;
             }
+            ConsoleLog("OnWin: start coroutine SaveScore");
             StartCoroutine(SaveScore());
+            ConsoleLog("OnWin: end coroutine SaveScore");
         }
 
         private void OnAuthButtonClick()
         {
+            ConsoleLog($"OnAuthButtonClick");
+            ConsoleLog($"OnAuthButtonClick: start coroutine Authorization");
             _currentCoroutine = StartCoroutine(Authorization());
+            ConsoleLog($"OnAuthButtonClick: end coroutine Authorization");
         }
 
         private IEnumerator Authorization()
         {
+            ConsoleLog($"Authorization: start AuthPlayer");
             yield return new WaitUntil(() => AuthPlayer() == 0 ? true : false);
+            ConsoleLog($"Authorization: end AuthPlayer");
             if (IsPlayerAuth)
             {
+                ConsoleLog($"Authorization: if (IsPlayerAuth): start coroutine SaveScore");
                 StartCoroutine(SaveScore());
+                ConsoleLog($"Authorization: if (IsPlayerAuth): end coroutine SaveScore");
             }
         }
 
         private IEnumerator SaveScore()
         {
+            ConsoleLog("SaveScore: start GetLeaderBoardScore");
             int score = GetLeaderBoardScore();
+            ConsoleLog($"SaveScore: end GetLeaderBoardScore int score = {score}");
             yield return null;
+            ConsoleLog($"SaveScore: score = {score} < _score.Score = {_score.Score}: start");
             if (score < _score.Score)
             {
+                ConsoleLog($"SaveScore: score = {score} < _score.Score = {_score.Score}: start SetLeaderBoardScore");
                 SetLeaderBoardScore(_score.Score);
+                ConsoleLog($"SaveScore: score = {score} < _score.Score = {_score.Score}: end SetLeaderBoardScore");
             }
+            ConsoleLog($"SaveScore: score = {score} < _score.Score = {_score.Score}: end");
             yield return null;
         }
 
