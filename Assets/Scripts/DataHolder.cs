@@ -18,7 +18,6 @@ namespace Assets.Scripts
         {
             SpawnBombCoord();
             AssignDistanceValuesToCells();
-            PrintMap();
         }
 
         private void SpawnBombCoord()
