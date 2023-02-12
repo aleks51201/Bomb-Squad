@@ -10,13 +10,14 @@
         return 0;
     },
     AuthPlayer: function () {
-        var result = 0;
         ysdk.auth.openAuthDialog()
-            .then(_result => result + 1)
-            .catch(_result => result = 0);
-        initPlayer()
-            .then()
-            .catch();
+            .then(_result => {
+                return 1;
+                initPlayer()
+                    .then(() => { })
+                    .catch(() => { });
+            })
+            .catch(() => {return 0});
         return result;
     },
     SetLeaderBoardScore: function (score) {
