@@ -10,20 +10,17 @@
         return 0;
     },
     AuthPlayer: function () {
-            if (player.getMode() === 'lite') {
-                // Игрок не авторизован.
-                ysdk.auth.openAuthDialog().then(() => {
+        if (_player.getMode() === 'lite') {
+            // Игрок не авторизован.
+            ysdk.auth.openAuthDialog().then(() => {
                     // Игрок успешно авторизован
-                    return 1;
                     initPlayer().catch(err => {
                         // Ошибка при инициализации объекта Player.
-                        return 0;
                     });
                 }).catch(() => {
                     // Игрок не авторизован.
-                    return 0;
                 });
-            }
+        }
     },
     SetLeaderBoardScore: function (score) {
         ysdk.getLeaderboards()
