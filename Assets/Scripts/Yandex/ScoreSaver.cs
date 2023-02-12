@@ -12,10 +12,16 @@ namespace Scripts.Yandex
         private Coroutine _currentCoroutine;
 
 
-        public bool IsPlayerAuth => IsPlayerAuthorized() == 1;
+        public bool IsPlayerAuth
+        {
+            get
+            {
+                ConsoleLog($"IsPlayerAuthorized: {IsPlayerAuthorized() == 1}");
+                return IsPlayerAuthorized() == 1;
+            }
+        }
 
-
-        [DllImport("__Internal")]
+            [DllImport("__Internal")]
         private static extern void SetLeaderBoardScore(int score);
         [DllImport("__Internal")]
         private static extern int GetLeaderBoardScore();
@@ -25,7 +31,9 @@ namespace Scripts.Yandex
         [DllImport("__Internal")]
         private static extern int AuthPlayer();
         [DllImport("__Internal")]
-        private static extern int ConsoleLog(string str);
+        private static extern void ConsoleLog(string str);
+        [DllImport("__Internal")]
+        private static extern void Hello();
 
 
 /*        //private void SetLeaderBoardScore(int score) { }
@@ -87,6 +95,7 @@ namespace Scripts.Yandex
         private void Awake()
         {
             _score = new();
+            _score.Init();
         }
 
         private void OnEnable()
