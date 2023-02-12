@@ -10,7 +10,10 @@
         return 0;
     },
     AuthPlayer: function () {
-        ysdk.auth.openAuthDialog();
+        var result = 0;
+        ysdk.auth.openAuthDialog()
+            .then(result => resutl + 1)
+            .catch(result => result = 0);
         return 0;
     },
     SetLeaderBoardScore: function (score) {
