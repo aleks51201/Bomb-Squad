@@ -60,6 +60,7 @@ namespace Assets.Scripts
             {
                 result.Add(i);
             }
+            data.PrintMap();
             return result.ToArray();
         }
 
