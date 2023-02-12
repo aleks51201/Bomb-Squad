@@ -22,6 +22,7 @@ namespace Assets.Scripts
         private void OnEnable()
         {
             _scoreSaver.AuthorizedEvent += UpdateButtonStatus;
+            UpdateButtonStatus();
         }
 
         private void OnDisable()
