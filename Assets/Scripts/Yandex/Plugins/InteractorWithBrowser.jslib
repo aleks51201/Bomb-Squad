@@ -10,7 +10,8 @@
         return 0;
     },
     AuthPlayer: function () {
-
+        ysdk.auth.openAuthDialog();
+        return 0;
     },
     SetLeaderBoardScore: function (score) {
         ysdk.getLeaderboards()
