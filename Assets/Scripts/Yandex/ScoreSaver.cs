@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts;
+using System;
 using System.Collections;
 using System.Runtime.InteropServices;
 using UnityEngine;
@@ -20,6 +21,10 @@ namespace Scripts.Yandex
                 return IsPlayerAuthorized() == 1;
             }
         }
+
+
+        public Action AuthorizedEvent;
+
 
             [DllImport("__Internal")]
         private static extern void SetLeaderBoardScore(int score);
@@ -67,6 +72,7 @@ namespace Scripts.Yandex
             ConsoleLog($"Authorization: start AuthPlayer");
             yield return new WaitUntil(() => AuthPlayer() == 0 ? true : false);
             ConsoleLog($"Authorization: end AuthPlayer");
+            AuthorizedEvent?.Invoke();
             if (IsPlayerAuth)
             {
                 ConsoleLog($"Authorization: if (IsPlayerAuth): start coroutine SaveScore");

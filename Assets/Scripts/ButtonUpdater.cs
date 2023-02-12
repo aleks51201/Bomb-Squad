@@ -9,7 +9,7 @@ namespace Assets.Scripts
         [SerializeField] private GameObject _btn;
 
 
-        private void OnEnable()
+        private void UpdateButtonStatus()
         {
             if (_scoreSaver.IsPlayerAuth)
             {
@@ -17,7 +17,16 @@ namespace Assets.Scripts
                 return;
             }
             _btn.SetActive(true);
-            
+        }
+
+        private void OnEnable()
+        {
+            _scoreSaver.AuthorizedEvent += UpdateButtonStatus;
+        }
+
+        private void OnDisable()
+        {
+            _scoreSaver.AuthorizedEvent -= UpdateButtonStatus;
         }
     }
 }
