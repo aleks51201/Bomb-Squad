@@ -12,9 +12,9 @@
     AuthPlayer: function () {
         var result = 0;
         ysdk.auth.openAuthDialog()
-            .then(result => resutl + 1)
-            .catch(result => result = 0);
-        return 0;
+            .then(_result => result + 1)
+            .catch(_result => result = 0);
+        return result;
     },
     SetLeaderBoardScore: function (score) {
         ysdk.getLeaderboards()
