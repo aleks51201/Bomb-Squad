@@ -37,15 +37,14 @@
             });
     },
     GetLeaderBoardScore: function () {
-        //var score = ysdk.getLeaderboards()
-            //.then(lb => lb.getLeaderboardPlayerEntry('leaderboard2021').score)
-            //.catch(err => {
-                //if (err.code === 'LEADERBOARD_PLAYER_NOT_PRESENT') {
+        var score = ysdk.getLeaderboards()
+            .then(lb => lb.getLeaderboardPlayerEntry('leaderboard2021').score)
+            .catch(err => {
+                if (err.code === 'LEADERBOARD_PLAYER_NOT_PRESENT') {
                     // Срабатывает, если у игрока нет записи в лидерборде
-                    //return 0;
-                //}
-            //});
-        //return score;
-        return 0;
+                    return 0;
+                }
+            });
+        return score;
     },
 });
