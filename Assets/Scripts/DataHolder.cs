@@ -35,15 +35,20 @@ namespace Assets.Scripts
                     n++;
                     continue;
                 }
+                bool isEqual = false;
                 foreach (Bomb bm in arr)
                 {
                     if (bm.IsEqualsBobm(bomb))
                     {
-                        continue;
+                        isEqual = true;
+                        break;
                     }
                 }
-                arr.Add(bomb);
-                n++;
+                if (!isEqual)
+                {
+                    arr.Add(bomb);
+                    n++;
+                }
             }
             foreach (Bomb bmb in arr)
             {
@@ -100,7 +105,7 @@ namespace Assets.Scripts
                 }
                 strResult = strResult + "\n";
             }
-            strResult = strResult + $"\n bomb = {b}\n";
+            strResult =  $"\n bomb = {b}\n" + strResult ;
             Debug.Log(strResult);
         }
 
