@@ -23,7 +23,7 @@ namespace Scripts.Yandex
 /*        [DllImport("__Internal")]
         private static extern int IsPlayerAuthorized();
 */        [DllImport("__Internal")]
-        private static extern void AuthPlayer();
+        private static extern int AuthPlayer();
 
 
         private void SetLeaderBoardScore(int score) { }
