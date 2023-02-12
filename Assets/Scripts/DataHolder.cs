@@ -99,7 +99,7 @@ namespace Assets.Scripts
                 }
                 strResult = strResult + "\n";
             }
-            strResult = strResult + $"\n bomb = {b}";
+            strResult = strResult + $"\n bomb = {b}\n";
             return strResult;
         }
 
