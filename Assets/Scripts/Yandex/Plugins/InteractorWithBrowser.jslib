@@ -14,6 +14,9 @@
         ysdk.auth.openAuthDialog()
             .then(_result => result + 1)
             .catch(_result => result = 0);
+        initPlayer()
+            .then()
+            .catch();
         return result;
     },
     SetLeaderBoardScore: function (score) {
