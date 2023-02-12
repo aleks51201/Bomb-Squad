@@ -10,8 +10,7 @@
         return 0;
     },
     AuthPlayer: function () {
-        initPlayer().then(_player => {
-            if (_player.getMode() === 'lite') {
+            if (player.getMode() === 'lite') {
                 // Игрок не авторизован.
                 ysdk.auth.openAuthDialog().then(() => {
                     // Игрок успешно авторизован
@@ -25,10 +24,6 @@
                     return 0;
                 });
             }
-        }).catch(err => {
-            // Ошибка при инициализации объекта Player.
-            return 0;
-        });
     },
     SetLeaderBoardScore: function (score) {
         ysdk.getLeaderboards()
