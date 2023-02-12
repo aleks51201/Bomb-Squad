@@ -60,7 +60,6 @@ namespace Assets.Scripts
             {
                 result.Add(i);
             }
-            data.PrintMap();
             return result.ToArray();
         }
 
@@ -82,7 +81,7 @@ namespace Assets.Scripts
 
         private void Update()
         {
-            if (!Input.GetKey(KeyCode.Space))
+            if (!Input.GetKeyDown(KeyCode.Space))
             {
                 return;
             }

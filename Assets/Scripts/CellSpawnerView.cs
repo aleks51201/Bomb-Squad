@@ -26,7 +26,6 @@ namespace Assets.Scripts
                     cell.DistanceValue = data.DistanceValueArr[i, j];
                 }
             }
-            data.PrintMap();
         }
 
         private void Start()
