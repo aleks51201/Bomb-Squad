@@ -86,14 +86,20 @@ namespace Assets.Scripts
         public string PrintMap()
         {
             string strResult = "";
+            int b= 0;
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 10; j++)
                 {
                     strResult = strResult +$" {array[i, j]}" ;
+                    if (array[i, j]==0)
+                    {
+                        b++;
+                    }
                 }
                 strResult = strResult + "\n";
             }
+            strResult = strResult + $"\n bomb = {b}";
             return strResult;
         }
 
