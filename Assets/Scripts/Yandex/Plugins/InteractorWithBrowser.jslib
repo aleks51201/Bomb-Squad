@@ -12,13 +12,12 @@
     AuthPlayer: function () {
         ysdk.auth.openAuthDialog()
             .then(_result => {
-                return 1;
                 initPlayer()
                     .then(() => { })
                     .catch(() => { });
+                return 1;
             })
             .catch(() => {return 0});
-        return result;
     },
     SetLeaderBoardScore: function (score) {
         ysdk.getLeaderboards()
