@@ -13,9 +13,8 @@
         ysdk.auth.openAuthDialog()
             .then(_result => {
                 initPlayer()
-                    .then(() => { })
-                    .catch(() => { });
-                return 1;
+                    .then(() => {return 1;})
+                    .catch(() => {return 0;});
             })
             .catch(() => {return 0});
     },
