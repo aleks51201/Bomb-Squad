@@ -11,7 +11,7 @@ namespace Assets.Scripts
 
         private void UpdateButtonStatus()
         {
-            if (CellView.IsWin || _scoreSaver.IsPlayerAuth)
+            if (!CellView.IsWin || _scoreSaver.IsPlayerAuth)
             {
                 _btn.SetActive(false);
                 return;
