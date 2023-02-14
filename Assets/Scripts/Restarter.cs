@@ -37,6 +37,7 @@ namespace Assets.Scripts
         {
             CellView.NumRightClick = 5;
             CellView.Bomb = 0;
+            CellView.IsWin = false;
             int[] distances = ChangeDataFormat();
             for(int i=0; i< Cells.Length;i++)
             {

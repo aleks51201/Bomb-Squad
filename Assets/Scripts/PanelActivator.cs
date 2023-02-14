@@ -33,13 +33,13 @@ namespace Assets.Scripts
         private void OnEnable()
         {
             CellView.GameLosedEvent += ActivateLosePanel;
-            CellView.GameWinEvent += ActivateWinPanel;
+            CellView.GameWonEvent += ActivateWinPanel;
         }
 
         private void OnDisable()
         {
             CellView.GameLosedEvent -= ActivateLosePanel;
-            CellView.GameWinEvent -= ActivateWinPanel;
+            CellView.GameWonEvent -= ActivateWinPanel;
         }
     }
 }

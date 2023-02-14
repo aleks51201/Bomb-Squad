@@ -70,15 +70,17 @@ namespace Scripts.Yandex
         private IEnumerator Authorization()
         {
             ConsoleLog($"Authorization: start AuthPlayer");
-            yield return new WaitUntil(() => AuthPlayer() == 0 ? true : false);
+            AuthPlayer();
             ConsoleLog($"Authorization: end AuthPlayer");
-            AuthorizedEvent?.Invoke();
-            if (IsPlayerAuth)
+            while (!IsPlayerAuth)
             {
-                ConsoleLog($"Authorization: if (IsPlayerAuth): start coroutine SaveScore");
-                StartCoroutine(SaveScore());
-                ConsoleLog($"Authorization: if (IsPlayerAuth): end coroutine SaveScore");
+                ConsoleLog($"Authorization: wait init player");
+                yield return null;
             }
+            AuthorizedEvent?.Invoke();
+            ConsoleLog($"Authorization: if (IsPlayerAuth): start coroutine SaveScore");
+            StartCoroutine(SaveScore());
+            ConsoleLog($"Authorization: if (IsPlayerAuth): end coroutine SaveScore");
         }
 
         private IEnumerator SaveScore()
@@ -106,13 +108,13 @@ namespace Scripts.Yandex
 
         private void OnEnable()
         {
-            CellView.GameWinEvent += OnWin;
+            CellView.GameWonEvent += OnWin;
             _btn.ButtonClickedEvent += OnAuthButtonClick;
         }
 
         private void OnDisable()
         {
-            CellView.GameWinEvent -= OnWin;
+            CellView.GameWonEvent -= OnWin;
             _btn.ButtonClickedEvent -= OnAuthButtonClick;
         }
     }

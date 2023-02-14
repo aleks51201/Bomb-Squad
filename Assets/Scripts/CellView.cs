@@ -8,6 +8,7 @@ public class CellView : MonoBehaviour, IPointerClickHandler
 {
     public  static int NumRightClick = 5;
     public static int Bomb = 0;
+    public static bool IsWin = false;
 
     [SerializeField] private Sprite bombSprite;
     [SerializeField] private Sprite flagSprite;
@@ -28,7 +29,7 @@ public class CellView : MonoBehaviour, IPointerClickHandler
 
 
     public static Action GameLosedEvent;
-    public static Action GameWinEvent;
+    public static Action GameWonEvent;
     public static Action ButtonClickedEbent;
 
 
@@ -75,7 +76,8 @@ public class CellView : MonoBehaviour, IPointerClickHandler
                         Bomb++;
                         if(Bomb == 5)
                         {
-                            GameWinEvent?.Invoke();
+                            IsWin = true;
+                            GameWonEvent?.Invoke();
                         }
                     }
                 }
