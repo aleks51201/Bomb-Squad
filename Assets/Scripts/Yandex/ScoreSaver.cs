@@ -10,7 +10,6 @@ namespace Scripts.Yandex
     {
         [SerializeField] private Btn _btn;
         private ScoreHolder _score;
-        private Coroutine _currentCoroutine;
 
 
         public bool IsPlayerAuth
@@ -26,7 +25,7 @@ namespace Scripts.Yandex
         public Action AuthorizedEvent;
 
 
-            [DllImport("__Internal")]
+        [DllImport("__Internal")]
         private static extern void SetLeaderBoardScore(int score);
         [DllImport("__Internal")]
         private static extern int GetLeaderBoardScore();
@@ -41,62 +40,39 @@ namespace Scripts.Yandex
         private static extern void Hello();
 
 
-/*        //private void SetLeaderBoardScore(int score) { }
-        private int GetLeaderBoardScore() { return 0; }
-        private int IsPlayerAuthorized() { return 0; }
-        private int AuthPlayer() { return 0; }
-*/
         private void OnWin()
         {
-            ConsoleLog("OnWin");
             if (!IsPlayerAuth)
             {
-                ConsoleLog("OnWin: player is not auth");
                 return;
             }
-            ConsoleLog("OnWin: start coroutine SaveScore");
             StartCoroutine(SaveScore());
-            ConsoleLog("OnWin: end coroutine SaveScore");
         }
 
         private void OnAuthButtonClick()
         {
-            ConsoleLog($"OnAuthButtonClick");
-            ConsoleLog($"OnAuthButtonClick: start coroutine Authorization");
-            _currentCoroutine = StartCoroutine(Authorization());
-            ConsoleLog($"OnAuthButtonClick: end coroutine Authorization");
+            StartCoroutine(Authorization());
         }
 
         private IEnumerator Authorization()
         {
-            ConsoleLog($"Authorization: start AuthPlayer");
             AuthPlayer();
-            ConsoleLog($"Authorization: end AuthPlayer");
             while (!IsPlayerAuth)
             {
-                ConsoleLog($"Authorization: wait init player");
                 yield return null;
             }
             AuthorizedEvent?.Invoke();
-            ConsoleLog($"Authorization: if (IsPlayerAuth): start coroutine SaveScore");
             StartCoroutine(SaveScore());
-            ConsoleLog($"Authorization: if (IsPlayerAuth): end coroutine SaveScore");
         }
 
         private IEnumerator SaveScore()
         {
-            ConsoleLog("SaveScore: start GetLeaderBoardScore");
             int score = GetLeaderBoardScore();
-            ConsoleLog($"SaveScore: end GetLeaderBoardScore int score = {score}");
             yield return null;
-            ConsoleLog($"SaveScore: score = {score} < _score.Score = {_score.Score}: start");
             if (0 == score || score > _score.Score)
             {
-                ConsoleLog($"SaveScore: score = {score} < _score.Score = {_score.Score}: start SetLeaderBoardScore");
                 SetLeaderBoardScore(_score.Score);
-                ConsoleLog($"SaveScore: score = {score} < _score.Score = {_score.Score}: end SetLeaderBoardScore");
             }
-            ConsoleLog($"SaveScore: score = {score} < _score.Score = {_score.Score}: end");
             yield return null;
         }
 
