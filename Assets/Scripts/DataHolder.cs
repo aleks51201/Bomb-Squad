@@ -81,7 +81,6 @@ namespace Assets.Scripts
                                 max = numMax;
                             }
                         }
-
                     }
                     array[i, j] = max;
                 }

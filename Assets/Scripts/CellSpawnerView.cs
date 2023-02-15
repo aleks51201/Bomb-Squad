@@ -8,7 +8,6 @@ namespace Assets.Scripts
         [SerializeField] private CellView cellView;
 
 
-
         private CellView SpawnCell()
         {
             return Instantiate(cellView, this.transform);
