@@ -15,7 +15,7 @@ namespace BombSquad
 
         public void Init()
         {
-            SpawnBombCoord();
+            CreateBombCoordOField();
             AssignDistanceValuesToCells();
         }
 
@@ -25,7 +25,7 @@ namespace BombSquad
             arr = bombCreater.Bombs;
         }
 
-        private void SpawnBombCoord()
+        private void CreateBombCoordOField()
         {
             CreateBombs();
             foreach (Bomb bmb in arr)
