@@ -1,10 +1,10 @@
-﻿using Assets.Scripts;
+﻿using BombSquad;
 using System;
 using System.Collections;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Scripts.Yandex
+namespace Yandex
 {
     public class ScoreSaver : MonoBehaviour
     {

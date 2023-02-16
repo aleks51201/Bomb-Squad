@@ -1,5 +1,5 @@
-﻿using Scripts.Yandex;
-using UnityEngine;
+﻿using UnityEngine;
+using Yandex;
 
 namespace BombSquad
 {
