@@ -2,6 +2,6 @@
 {
     public static class ControlSystem
     {
-        public static bool IsMobile = true;
+        public static bool IsMobile = false;
     }
 }
