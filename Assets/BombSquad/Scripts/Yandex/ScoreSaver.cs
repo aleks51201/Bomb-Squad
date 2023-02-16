@@ -8,7 +8,7 @@ namespace Yandex
 {
     public class ScoreSaver : MonoBehaviour
     {
-        [SerializeField] private Btn _btn;
+        [SerializeField] private ButtonWithClick _btn;
         private ScoreHolder _score;
 
 
@@ -85,13 +85,13 @@ namespace Yandex
         private void OnEnable()
         {
             CellView.GameWonEvent += OnWin;
-            _btn.ButtonClickedEvent += OnAuthButtonClick;
+            _btn.LeftButtonClickedEvent += OnAuthButtonClick;
         }
 
         private void OnDisable()
         {
             CellView.GameWonEvent -= OnWin;
-            _btn.ButtonClickedEvent -= OnAuthButtonClick;
+            _btn.LeftButtonClickedEvent -= OnAuthButtonClick;
         }
     }
 }

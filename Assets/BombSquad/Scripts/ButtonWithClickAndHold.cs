@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Assets.BombSquad.Scripts
+namespace BombSquad
 {
     public class ButtonWithClickAndHold : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {

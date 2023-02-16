@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace BombSquad
 {
-    public class CellView : MonoBehaviour, IPointerClickHandler
+    public class CellView : MonoBehaviour 
     {
         public static int NumRightClick = 5;
         public static int Bomb = 0;
@@ -57,7 +57,7 @@ namespace BombSquad
             GetComponentInChildren<TextMeshProUGUI>().text = $"{DistanceValue}";
         }
 
-        public void OnPointerClick(PointerEventData eventData)
+        private void OnAlternativeAction()
         {
             if (eventData.button == PointerEventData.InputButton.Right)
             {
@@ -97,6 +97,15 @@ namespace BombSquad
             }
         }
 
+        private void OnEnable()
+        {
+            
+        }
+
+        private void OnDisable()
+        {
+            
+        }
     }
 
 }

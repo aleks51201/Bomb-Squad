@@ -12,7 +12,7 @@ namespace BombSquad
     public class Restarter:MonoBehaviour
     {
         [SerializeField] private GameObject _losePanel;
-        [SerializeField] private Btn _btn;
+        [SerializeField] private ButtonWithClick _btn;
 
         private CellView[] _cells;
 
@@ -91,12 +91,12 @@ namespace BombSquad
 
         private void OnEnable()
         {
-            _btn.ButtonClickedEvent += OnButtonClicked;
+            _btn.LeftButtonClickedEvent += OnButtonClicked;
         }
 
         private void OnDisable()
         {
-            _btn.ButtonClickedEvent -= OnButtonClicked;
+            _btn.LeftButtonClickedEvent -= OnButtonClicked;
         }
     }
 }
