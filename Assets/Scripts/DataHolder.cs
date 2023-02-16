@@ -20,14 +20,13 @@ namespace Assets.Scripts
             AssignDistanceValuesToCells();
         }
 
-        private void SpawnBombCoord()
+        private void CreateBombs()
         {
             arr = new List<Bomb>();
             int n = 0;
-            Bomb bomb;
             while (n < 5)
             {
-                bomb = new(GetRandomNum(), GetRandomNum());
+                Bomb bomb = new(GetRandomNum(), GetRandomNum());
                 if (arr.Count == 0)
                 {
                     arr.Add(bomb);
@@ -49,6 +48,11 @@ namespace Assets.Scripts
                     n++;
                 }
             }
+        }
+
+        private void SpawnBombCoord()
+        {
+            CreateBombs();
             foreach (Bomb bmb in arr)
             {
                 array1[bmb.Y, bmb.X] = true;
