@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace BombSquad
@@ -8,7 +7,7 @@ namespace BombSquad
     {
         private int[,] array = new int[10, 10];
         private bool[,] array1 = new bool[10, 10];
-        private List<Bomb> arr;
+        private Bomb[] arr;
 
 
         public int[,] DistanceValueArr => array;
@@ -22,32 +21,8 @@ namespace BombSquad
 
         private void CreateBombs()
         {
-            arr = new List<Bomb>();
-            int n = 0;
-            while (n < 5)
-            {
-                Bomb bomb = new(GetRandomNum(), GetRandomNum());
-                if (arr.Count == 0)
-                {
-                    arr.Add(bomb);
-                    n++;
-                    continue;
-                }
-                bool isEqual = false;
-                foreach (Bomb bm in arr)
-                {
-                    if (bm.IsEqualsBobm(bomb))
-                    {
-                        isEqual = true;
-                        break;
-                    }
-                }
-                if (!isEqual)
-                {
-                    arr.Add(bomb);
-                    n++;
-                }
-            }
+            BombCreater bombCreater = new(5);
+            arr = bombCreater.Bombs;
         }
 
         private void SpawnBombCoord()
@@ -73,7 +48,7 @@ namespace BombSquad
                     int max = 0;
                     foreach (var bmb in arr)
                     {
-                        int numMax = Math.Max(Math.Abs(bmb.X -j) ,Math.Abs( bmb.Y - i));
+                        int numMax = Math.Max(Math.Abs(bmb.X - j), Math.Abs(bmb.Y - i));
                         if (max == 0)
                         {
                             max = numMax;
@@ -94,27 +69,21 @@ namespace BombSquad
         public void PrintMap()
         {
             string strResult = "";
-            int b= 0;
+            int b = 0;
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 10; j++)
                 {
-                    strResult = strResult +$" {array[i, j]}" ;
-                    if (array[i, j]==0)
+                    strResult = strResult + $" {array[i, j]}";
+                    if (array[i, j] == 0)
                     {
                         b++;
                     }
                 }
                 strResult = strResult + "\n";
             }
-            strResult =  $"\n bomb = {b}\n" + strResult ;
+            strResult = $"\n bomb = {b}\n" + strResult;
             Debug.Log(strResult);
-        }
-
-        private int GetRandomNum()
-        {
-            System.Random rnd = new System.Random();
-            return rnd.Next(0, 10);
         }
     }
 }
