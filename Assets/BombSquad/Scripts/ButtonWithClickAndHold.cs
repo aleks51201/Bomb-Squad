@@ -11,6 +11,7 @@ namespace BombSquad
 
         private Coroutine _currentCoroutine;
         private bool _isHolding;
+        private bool _held;
 
 
         public Action ButtonClickedEvent;
@@ -25,12 +26,14 @@ namespace BombSquad
         private IEnumerator StartHoldTimerRoutine()
         {
             int n = 0;
+            Debug.Log("startHold");
             _isHolding = true;
             while(n< timeDelayInMilliseconds)
             {
-                yield return new WaitForSeconds(0.01f);
+                yield return new WaitForSeconds(0.001f);
                 n++;
             }
+            Debug.Log("endHold");
             OnButtonHeld();
         }
 
@@ -38,6 +41,7 @@ namespace BombSquad
         {
             ButtonHeldEvent?.Invoke();
             _isHolding = false;
+            _held = true;
         }
 
         private void EndTimerAsync()
@@ -51,7 +55,7 @@ namespace BombSquad
 
         private void Click()
         {
-            if (!_isHolding)
+            if (!_isHolding && !_held)
             {
                 ButtonClickedEvent?.Invoke();
             }
@@ -66,6 +70,7 @@ namespace BombSquad
         {
             Click();
             EndTimerAsync();
+            _held = false;
         }
 
         private void OnEnable()
