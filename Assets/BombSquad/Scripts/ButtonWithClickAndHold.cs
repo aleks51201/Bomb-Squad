@@ -26,14 +26,12 @@ namespace BombSquad
         private IEnumerator StartHoldTimerRoutine()
         {
             int n = 0;
-            Debug.Log("startHold");
             _isHolding = true;
             while(n< timeDelayInMilliseconds)
             {
                 yield return new WaitForSeconds(0.001f);
                 n++;
             }
-            Debug.Log("endHold");
             OnButtonHeld();
         }
 
@@ -68,17 +66,17 @@ namespace BombSquad
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            Click();
             EndTimerAsync();
+            Click();
             _held = false;
         }
 
         private void OnEnable()
         {
-            if (!ControlSystem.IsMobile)
+/*            if (!ControlSystem.IsMobile)
             {
                 this.enabled = false;
             }
-        }
+*/        }
     }
 }
