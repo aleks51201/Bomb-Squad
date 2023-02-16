@@ -1475,8 +1475,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1927997826}
-  loseText: Lose
-  winText: Win
+  loseText: "\u0412\u044B \u043F\u0440\u043E\u0438\u0433\u0440\u0430\u043B\u0438
+    :("
+  winText: "\u041F\u043E\u0431\u0435\u0434\u0430!"
 --- !u!114 &1435936261
 MonoBehaviour:
   m_ObjectHideFlags: 0
