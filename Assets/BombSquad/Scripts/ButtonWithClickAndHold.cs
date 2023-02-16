@@ -14,7 +14,7 @@ namespace BombSquad
 
 
         public Action ButtonClickedEvent;
-        public Action ButtonHeld;
+        public Action ButtonHeldEvent;
 
 
         private void StartTimerAsync()
@@ -36,7 +36,7 @@ namespace BombSquad
 
         private void OnButtonHeld()
         {
-            ButtonHeld?.Invoke();
+            ButtonHeldEvent?.Invoke();
             _isHolding = false;
         }
 
@@ -66,6 +66,14 @@ namespace BombSquad
         {
             Click();
             EndTimerAsync();
+        }
+
+        private void OnEnable()
+        {
+            if (!ControlSystem.IsMobile)
+            {
+                this.enabled = false;
+            }
         }
     }
 }

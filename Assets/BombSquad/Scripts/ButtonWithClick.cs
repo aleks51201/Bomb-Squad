@@ -31,5 +31,13 @@ namespace BombSquad
                 OnRightClick();
             }
         }
+
+        private void OnEnable()
+        {
+            if (ControlSystem.IsMobile)
+            {
+                this.enabled = false;
+            }
+        }
     }
 }

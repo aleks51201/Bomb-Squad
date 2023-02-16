@@ -22,6 +22,7 @@ namespace BombSquad
         private void CreateBombs()
         {
             BombCreater bombCreater = new(5);
+            bombCreater.CreateBombs();
             arr = bombCreater.Bombs;
         }
 

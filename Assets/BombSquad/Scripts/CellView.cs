@@ -15,6 +15,7 @@ namespace BombSquad
         [SerializeField] private Sprite flagSprite;
         [SerializeField] private Sprite defaultSprite;
         [SerializeField] private ButtonWithClick button;
+        [SerializeField] private ButtonWithClickAndHold buttonWithHold;
 
 
         public int DistanceValue { get; set; }
@@ -98,12 +99,16 @@ namespace BombSquad
         {
             button.LeftButtonClickedEvent += OnClick;
             button.RightButtonClickedEvent += OnAlternativeAction;
+            buttonWithHold.ButtonClickedEvent += OnClick;
+            buttonWithHold.ButtonHeldEvent += OnAlternativeAction;
         }
 
         private void OnDisable()
         {
             button.LeftButtonClickedEvent -= OnClick;
             button.RightButtonClickedEvent -= OnAlternativeAction;
+            buttonWithHold.ButtonClickedEvent -= OnClick;
+            buttonWithHold.ButtonHeldEvent -= OnAlternativeAction;
         }
     }
 
