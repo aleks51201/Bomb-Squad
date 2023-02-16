@@ -54,7 +54,7 @@ namespace BombSquad
 
         private int[] ChangeDataFormat()
         {
-            DataHolder data = new();
+            MapCreater data = new();
             data.Init();
             List<int> result = new();
             foreach(int i in data.DistanceValueArr)

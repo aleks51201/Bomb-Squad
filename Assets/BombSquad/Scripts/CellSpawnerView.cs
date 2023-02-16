@@ -15,7 +15,7 @@ namespace BombSquad
 
         private void SpawnCels()
         {
-            var data = new DataHolder();
+            var data = new MapCreater();
             data.Init();
             for (int i = 0; i < 10; i++)
             {

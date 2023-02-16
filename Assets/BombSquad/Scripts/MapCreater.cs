@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace BombSquad
 {
-    public class DataHolder
+    public class MapCreater
     {
         private int[,] array = new int[10, 10];
         private bool[,] array1 = new bool[10, 10];
