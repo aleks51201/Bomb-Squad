@@ -1,0 +1,209 @@
+{
+  "format": 1,
+  "restore": {
+    "T:\\Project\\unityproj\\Bomb-Squad\\BombSquadTest1\\BombSquadTest1.csproj": {}
+  },
+  "projects": {
+    "T:\\Project\\unityproj\\Bomb-Squad\\BombSquadTest1\\BombSquadTest1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "T:\\Project\\unityproj\\Bomb-Squad\\BombSquadTest1\\BombSquadTest1.csproj",
+        "projectName": "BombSquadTest1",
+        "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\BombSquadTest1\\BombSquadTest1.csproj",
+        "packagesPath": "C:\\Users\\Vitalik\\.nuget\\packages\\",
+        "outputPath": "T:\\Project\\unityproj\\Bomb-Squad\\BombSquadTest1\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "T:\\programs\\VS\\VS_SDK\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Vitalik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "T:\\Project\\unityproj\\Bomb-Squad\\GameAssembly.csproj": {
+                "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\GameAssembly.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.4, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.1, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.17.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "T:\\Project\\unityproj\\Bomb-Squad\\GameAssembly.csproj": {
+      "restore": {
+        "projectUniqueName": "T:\\Project\\unityproj\\Bomb-Squad\\GameAssembly.csproj",
+        "projectName": "GameAssembly",
+        "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\GameAssembly.csproj",
+        "frameworks": {
+          "net471": {
+            "projectReferences": {
+              "T:\\Project\\unityproj\\Bomb-Squad\\Unity.TextMeshPro.csproj": {
+                "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\Unity.TextMeshPro.csproj"
+              },
+              "T:\\Project\\unityproj\\Bomb-Squad\\UnityEditor.UI.csproj": {
+                "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEditor.UI.csproj"
+              },
+              "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.UI.csproj": {
+                "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net471": {}
+      }
+    },
+    "T:\\Project\\unityproj\\Bomb-Squad\\Unity.TextMeshPro.csproj": {
+      "restore": {
+        "projectUniqueName": "T:\\Project\\unityproj\\Bomb-Squad\\Unity.TextMeshPro.csproj",
+        "projectName": "Unity.TextMeshPro",
+        "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\Unity.TextMeshPro.csproj",
+        "frameworks": {
+          "net471": {
+            "projectReferences": {
+              "T:\\Project\\unityproj\\Bomb-Squad\\UnityEditor.UI.csproj": {
+                "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEditor.UI.csproj"
+              },
+              "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.UI.csproj": {
+                "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net471": {}
+      }
+    },
+    "T:\\Project\\unityproj\\Bomb-Squad\\UnityEditor.TestRunner.csproj": {
+      "restore": {
+        "projectUniqueName": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEditor.TestRunner.csproj",
+        "projectName": "UnityEditor.TestRunner",
+        "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEditor.TestRunner.csproj",
+        "frameworks": {
+          "net471": {
+            "projectReferences": {
+              "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.TestRunner.csproj": {
+                "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.TestRunner.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net471": {}
+      }
+    },
+    "T:\\Project\\unityproj\\Bomb-Squad\\UnityEditor.UI.csproj": {
+      "restore": {
+        "projectUniqueName": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEditor.UI.csproj",
+        "projectName": "UnityEditor.UI",
+        "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEditor.UI.csproj",
+        "frameworks": {
+          "net471": {
+            "projectReferences": {
+              "T:\\Project\\unityproj\\Bomb-Squad\\UnityEditor.TestRunner.csproj": {
+                "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEditor.TestRunner.csproj"
+              },
+              "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.TestRunner.csproj": {
+                "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.TestRunner.csproj"
+              },
+              "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.UI.csproj": {
+                "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.UI.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net471": {}
+      }
+    },
+    "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.TestRunner.csproj": {
+      "restore": {
+        "projectUniqueName": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.TestRunner.csproj",
+        "projectName": "UnityEngine.TestRunner",
+        "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.TestRunner.csproj",
+        "frameworks": {
+          "net471": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net471": {}
+      }
+    },
+    "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.UI.csproj": {
+      "restore": {
+        "projectUniqueName": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.UI.csproj",
+        "projectName": "UnityEngine.UI",
+        "projectPath": "T:\\Project\\unityproj\\Bomb-Squad\\UnityEngine.UI.csproj",
+        "frameworks": {
+          "net471": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net471": {}
+      }
+    }
+  }
+}
