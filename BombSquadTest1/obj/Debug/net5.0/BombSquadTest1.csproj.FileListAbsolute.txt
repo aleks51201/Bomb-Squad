@@ -1,0 +1,5 @@
+T:\Project\unityproj\Bomb-Squad\BombSquadTest1\obj\Debug\net5.0\BombSquadTest1.csproj.AssemblyReference.cache
+T:\Project\unityproj\Bomb-Squad\BombSquadTest1\obj\Debug\net5.0\BombSquadTest1.GeneratedMSBuildEditorConfig.editorconfig
+T:\Project\unityproj\Bomb-Squad\BombSquadTest1\obj\Debug\net5.0\BombSquadTest1.AssemblyInfoInputs.cache
+T:\Project\unityproj\Bomb-Squad\BombSquadTest1\obj\Debug\net5.0\BombSquadTest1.AssemblyInfo.cs
+T:\Project\unityproj\Bomb-Squad\BombSquadTest1\obj\Debug\net5.0\BombSquadTest1.csproj.CoreCompileInputs.cache

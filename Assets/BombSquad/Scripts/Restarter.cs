@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts
+namespace BombSquad
 {
     public class Restarter:MonoBehaviour
     {

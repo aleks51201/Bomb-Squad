@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-namespace Assets.Scripts
+namespace BombSquad
 {
     public class PanelActivator : MonoBehaviour
     {

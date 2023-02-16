@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace BombSquadTest1
 {
-    public class Tests
+    public class BombCreaterTests
     {
         [Test]
         public void WhenCreatingBombs_AndArrayBombsIsEmpty_ThenBombCountShouldBe5()
@@ -12,6 +12,7 @@ namespace BombSquadTest1
             BombCreater bombCreater = new(5);
 
             // Act.
+            bombCreater.CreateBombs();
 
             // Assert.
             Assert.AreEqual(5, bombCreater.Bombs.Length);

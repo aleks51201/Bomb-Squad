@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Assets.Scripts
+namespace BombSquad
 {
     public class BombCreater
     {

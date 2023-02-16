@@ -1,5 +1,5 @@
 ﻿
-namespace Assets.Scripts
+namespace BombSquad
 {
     public class ScoreHolder
     {
