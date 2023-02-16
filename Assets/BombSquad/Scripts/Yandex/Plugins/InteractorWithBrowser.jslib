@@ -38,4 +38,12 @@
     ConsoleLog: function (str) {
         console.log(UTF8ToString(str));
     },
+    IsDesktop: function () {
+        if (ysdk.deviceInfo.isDesktop()) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    },
 });
