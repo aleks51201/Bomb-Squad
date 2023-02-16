@@ -1,12 +1,11 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace BombSquad
 {
-    public class CellView : MonoBehaviour 
+    public class CellView : MonoBehaviour
     {
         public static int NumRightClick = 5;
         public static int Bomb = 0;
@@ -15,6 +14,7 @@ namespace BombSquad
         [SerializeField] private Sprite bombSprite;
         [SerializeField] private Sprite flagSprite;
         [SerializeField] private Sprite defaultSprite;
+        [SerializeField] private ButtonWithClick button;
 
 
         public int DistanceValue { get; set; }
@@ -59,52 +59,51 @@ namespace BombSquad
 
         private void OnAlternativeAction()
         {
-            if (eventData.button == PointerEventData.InputButton.Right)
+            var img = GetComponent<Image>();
+            if (!IsMarked)
             {
-                var img = GetComponent<Image>();
-                if (!IsMarked)
+                if (NumRightClick > 0)
                 {
-                    if (NumRightClick > 0)
+                    if (IsClicked)
                     {
-                        if (IsClicked)
+                        return;
+                    }
+                    img.sprite = flagSprite;
+                    NumRightClick--;
+                    IsMarked = true;
+                    if (IsBomb)
+                    {
+                        Bomb++;
+                        if (Bomb == 5)
                         {
-                            return;
-                        }
-                        img.sprite = flagSprite;
-                        NumRightClick--;
-                        IsMarked = true;
-                        if (IsBomb)
-                        {
-                            Bomb++;
-                            if (Bomb == 5)
-                            {
-                                IsWin = true;
-                                GameWonEvent?.Invoke();
-                            }
+                            IsWin = true;
+                            GameWonEvent?.Invoke();
                         }
                     }
                 }
-                else
+            }
+            else
+            {
+                img.sprite = defaultSprite;
+                IsMarked = false;
+                NumRightClick++;
+                if (IsBomb)
                 {
-                    img.sprite = defaultSprite;
-                    IsMarked = false;
-                    NumRightClick++;
-                    if (IsBomb)
-                    {
-                        Bomb--;
-                    }
+                    Bomb--;
                 }
             }
         }
 
         private void OnEnable()
         {
-            
+            button.LeftButtonClickedEvent += OnClick;
+            button.RightButtonClickedEvent += OnAlternativeAction;
         }
 
         private void OnDisable()
         {
-            
+            button.LeftButtonClickedEvent -= OnClick;
+            button.RightButtonClickedEvent -= OnAlternativeAction;
         }
     }
 

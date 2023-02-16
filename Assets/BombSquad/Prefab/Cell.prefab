@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 893953823976606737}
   - component: {fileID: 199222486093172016}
   - component: {fileID: 4285035947964310450}
+  - component: {fileID: 5940507263520655417}
   m_Layer: 5
   m_Name: Cell
   m_TagString: Untagged
@@ -285,3 +286,16 @@ MonoBehaviour:
   bombSprite: {fileID: 21300000, guid: 87e417efb8f5ef04bb7a5ccb64e4e7ca, type: 3}
   flagSprite: {fileID: 21300000, guid: 9eae16f99a733d94782b16e71748c01b, type: 3}
   defaultSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  button: {fileID: 5940507263520655417}
+--- !u!114 &5940507263520655417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000716254795638128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d9b205723d72a4380e99655d86f9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
