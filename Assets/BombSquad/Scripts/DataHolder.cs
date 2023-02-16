@@ -48,7 +48,7 @@ namespace BombSquad
                     int max = 0;
                     foreach (var bmb in arr)
                     {
-                        int numMax = Math.Max(Math.Abs(bmb.X - j), Math.Abs(bmb.Y - i));
+                        int numMax = MaxDistance(bmb.X - j, bmb.Y - i);
                         if (max == 0)
                         {
                             max = numMax;
@@ -66,24 +66,9 @@ namespace BombSquad
             }
         }
 
-        public void PrintMap()
+        private int MaxDistance(int x, int y)
         {
-            string strResult = "";
-            int b = 0;
-            for (int i = 0; i < 10; i++)
-            {
-                for (int j = 0; j < 10; j++)
-                {
-                    strResult = strResult + $" {array[i, j]}";
-                    if (array[i, j] == 0)
-                    {
-                        b++;
-                    }
-                }
-                strResult = strResult + "\n";
-            }
-            strResult = $"\n bomb = {b}\n" + strResult;
-            Debug.Log(strResult);
+            return Math.Max(Math.Abs(x), Math.Abs(y));
         }
     }
 }
