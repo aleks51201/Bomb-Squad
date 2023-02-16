@@ -1,15 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using Assets.Scripts;
 using BombSquad;
 using NUnit.Framework;
-using UnityEngine;
-using UnityEngine.TestTools;
+using System.Collections.Generic;
 
 public class BombCreateTests
 {
     [Test]
-    public void whencreatingbombs_andarraybombsisempty_thenbombcountshouldbe5()
+    public void WhenCreatingBombs_AndArrayBombsIsEmpty_ThenBombCountShouldBe5()
     {
         // arrange.
         BombCreater bombcreater = new(5);
@@ -19,6 +15,32 @@ public class BombCreateTests
 
         // assert.
         Assert.AreEqual(5, bombcreater.Bombs.Length);
+    }
 
+    [Test]
+    public void WhenCreatingBombs_AndArrayBombCountIs5_ThenAllBombHaveDifferentCoords()
+    {
+        // Arrange.
+        BombCreater bombCreater = new(5);
+
+        // Act.
+        bombCreater.CreateBombs();
+        List<int> list = new();
+        int n = 0;
+        while(n< 5)
+        {
+            Bomb bomb = bombCreater.Bombs[n];
+            foreach (Bomb bmb in bombCreater.Bombs)
+            {
+                if (bomb.IsEqualsBobm(bmb))
+                {
+                    list.Add(1);
+                }
+            }
+            n++;
+        }
+
+        // Assert.
+        Assert.AreEqual(0, list.Count);
     }
 }
