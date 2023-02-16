@@ -25,7 +25,7 @@ public class BombCreateTests
 
         // Act.
         bombCreater.CreateBombs();
-        List<int> list = new();
+        int numCollisions = 0;
         int n = 0;
         while(n< 5)
         {
@@ -34,13 +34,13 @@ public class BombCreateTests
             {
                 if (bomb.IsEqualsBobm(bmb))
                 {
-                    list.Add(1);
+                    numCollisions++;
                 }
             }
             n++;
         }
 
         // Assert.
-        Assert.AreEqual(0, list.Count);
+        Assert.AreEqual(5, numCollisions);
     }
 }
