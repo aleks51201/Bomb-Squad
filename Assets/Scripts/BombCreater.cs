@@ -25,11 +25,11 @@ namespace Assets.Scripts
 
         public void CreateBombs()
         {
+            _bombs = new();
             int n = 0;
-            
             while (n < _countBombs)
             {
-                Bomb bomb = CreateBomb(); 
+                Bomb bomb = CreateBomb();
                 if (_bombs.Count == 0)
                 {
                     _bombs.Add(bomb);
