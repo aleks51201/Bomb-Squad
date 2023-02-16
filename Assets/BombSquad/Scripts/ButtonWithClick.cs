@@ -34,10 +34,10 @@ namespace BombSquad
 
         private void OnEnable()
         {
-            if (ControlSystem.IsMobile)
+/*            if (ControlSystem.IsMobile)
             {
                 this.enabled = false;
             }
-        }
+*/        }
     }
 }

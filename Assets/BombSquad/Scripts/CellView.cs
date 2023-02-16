@@ -97,18 +97,30 @@ namespace BombSquad
 
         private void OnEnable()
         {
-            button.LeftButtonClickedEvent += OnClick;
-            button.RightButtonClickedEvent += OnAlternativeAction;
-            buttonWithHold.ButtonClickedEvent += OnClick;
-            buttonWithHold.ButtonHeldEvent += OnAlternativeAction;
+            if (!ControlSystem.IsMobile)
+            {
+                button.LeftButtonClickedEvent += OnClick;
+                button.RightButtonClickedEvent += OnAlternativeAction;
+            }
+            else
+            {
+                buttonWithHold.ButtonClickedEvent += OnClick;
+                buttonWithHold.ButtonHeldEvent += OnAlternativeAction;
+            }
         }
 
         private void OnDisable()
         {
-            button.LeftButtonClickedEvent -= OnClick;
-            button.RightButtonClickedEvent -= OnAlternativeAction;
-            buttonWithHold.ButtonClickedEvent -= OnClick;
-            buttonWithHold.ButtonHeldEvent -= OnAlternativeAction;
+            if (!ControlSystem.IsMobile)
+            {
+                button.LeftButtonClickedEvent += OnClick;
+                button.RightButtonClickedEvent += OnAlternativeAction;
+            }
+            else
+            {
+                buttonWithHold.ButtonClickedEvent -= OnClick;
+                buttonWithHold.ButtonHeldEvent -= OnAlternativeAction;
+            }
         }
     }
 
